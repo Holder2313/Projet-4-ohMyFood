@@ -1,7 +1,150 @@
+// ----------VARIABLES--------------//
+
+// -----couleurs
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+
+$background: #00000025;
+$background2: #EAEAEA;
+
+
+$secondary-color-text: #353535;
+
+$icon-color: #7E7E7E;
+
+$box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+
+
+// -----polices
+$title-font: 'Shrikhand';
+$text-font: 'Roboto';
+
+// ----------MIXINS  ---------------//
+
+@mixin flex-row-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+//---mixin-elements
+
+@mixin main-button{
+    color: white;
+    background: mix($primary-color, $secondary-color, 50%);
+    border-radius: 25px;
+    font-size: 16px;
+    width: 218px;
+    height: 50px;
+    border: none;
+    box-shadow: $box-shadow;
+}
+
+
+//----------general--------//
+
 body{
-background-color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $text-font;
 }
 
 h1{
-    font-size: 50px;
+    font-family: $title-font;
+    font-size: 30px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+
+//----------- header ------------//
+
+.header{
+    height: 113px;
+
+    .logo-box{
+        @include flex-row-center;
+        height: 50%;
+        border-bottom: 3px solid #00000026;
+    }
+
+    .logo-localisation{
+        @include flex-row-center;
+        background: $background2;
+        height: 50%;
+        gap: 15px;
+    }
+}
+
+// ---------explore---------//
+
+.explore{
+    @include flex-column-center;
+    padding: 30px;
+    background: #eaeaea9e;
+
+    h3{
+        text-align: center;
+    }
+
+    .explore-text{
+        font-weight: 300;
+        text-align: center;
+        font-size: 18px;
+        color: $secondary-color-text;
+    }
+
+    button{
+        @include main-button;
+    }
+}
+
+// ---------fonctionnement---------//
+
+.fonctionnement{
+    @include flex-column-center;
+    padding: 40px;
+}
+
+.fonctionnement-card{
+    @include flex-row-center;
+    box-shadow: $box-shadow;
+    background: $background2;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    
+    .icon{
+        color: $icon-color;
+        font-size: 20px;
+        padding: 0 20px;
+        position: absolute;
+        left: 50px;
+    }
+
+    .number{
+        background: $primary-color;
+        @include flex-row-center;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        left: 20px;
+    }
 }
