@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header {
+  height: 113px;
+}
+.header .logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1490196078);
+}
+.header .logo-localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+  height: 50%;
+  gap: 15px;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(234, 234, 234, 0.6196078431);
+}
+.explore h3 {
+  text-align: center;
+}
+.explore .explore-text {
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #353535;
+}
+.explore button {
+  color: white;
+  background: #c968db;
+  border-radius: 25px;
+  font-size: 16px;
+  width: 218px;
+  height: 50px;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.fonctionnement-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  background: #EAEAEA;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.fonctionnement-card .icon {
+  color: #7E7E7E;
+  font-size: 20px;
+  padding: 0 20px;
+  position: absolute;
+  left: 50px;
+}
+.fonctionnement-card .number {
+  background: #9356dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+}
