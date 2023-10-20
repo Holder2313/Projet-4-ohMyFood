@@ -1,0 +1,82 @@
+// positions
+@mixin flex-row-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-column-center {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+// menus
+
+@mixin menus-titre {
+   font-family: $title-font;
+   font-size: 28px;
+   font-weight: 400;
+}
+
+@mixin menu-type-title{
+   font-size: 16px;
+   font-weight: 300;
+   margin: 15px 0;
+
+   &::after {
+         content: "";
+         background-color: #99E2D0;
+         width: 40px;
+         height: 3px;
+         display: block;
+      }
+}
+
+@mixin menu-card{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 10px;
+      border-radius: 15px ;
+}
+
+
+
+
+
+// tailles écrans
+@mixin breakpoint($point) {
+   @if $point ==large {
+      @media only screen and (max-width: 1366px) {
+         @content;
+      }
+   }
+
+   @else if $point ==desktop {
+      @media only screen and (min-width: 1024px) {
+         @content;
+      }
+   }
+
+   @else if $point ==tablet {
+      @media only screen and (min-width: 490px) {
+         @content;
+      }
+   }
+}
+
+@mixin transform ($transform) {
+   -ms-transform: $transform;
+   -webkit-transform: $transform;
+   transform: $transform;
+}
+
+@mixin css3-prefix($prop, $value) {
+   -webkit-#{$prop}: #{$value};
+   -moz-#{$prop}: #{$value};
+   -ms-#{$prop}: #{$value};
+   -o-#{$prop}: #{$value};
+   #{$prop}: #{$value};
+}

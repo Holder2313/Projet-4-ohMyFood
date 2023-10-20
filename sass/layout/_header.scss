@@ -1,0 +1,21 @@
+.header {
+    height: 113px;
+
+    &__logo {
+        @include flex-row-center;
+        height: 50%;
+    }
+
+    &__localisation {
+        @include flex-row-center;
+        background: $background2;
+        border-top: 3px solid #00000026;
+        height: 50%;
+
+        &__city {
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+}
+

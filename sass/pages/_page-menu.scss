@@ -1,0 +1,68 @@
+.menuHeader{
+    &__logo{
+        @include flex-row-center;
+        &__arrow{
+            position: absolute;
+            left: 20px;
+            font-size: 17px;
+            color: black;
+            
+        }
+        &__titre{
+            text-align: center;
+        }
+    }
+    &__image{
+        width: 100vw;
+        height: 275px;
+        object-fit: cover;
+    }
+}
+
+.menuSection{
+    background: #F6F6F6;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    bottom: 50px;
+
+    &__title{
+        @include flex-row-center;
+        &__restaurant{
+            @include menus-titre;
+        }
+    }
+}
+
+.menus{
+    padding: 10px;
+    
+    
+    &__type{
+        @include menu-type-title;
+
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &__card{
+        @include menu-card;
+
+        &__plat{
+
+            &__info{
+                font-size: 15px;
+                font-weight: 300;
+                margin-top: 2px;
+            }
+        }
+        &__price{
+            align-self: last baseline;
+        }
+    }
+    }
+
+    
+}
+ 

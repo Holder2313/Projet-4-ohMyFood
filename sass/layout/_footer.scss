@@ -1,0 +1,30 @@
+.footer {
+    background: $background-footer;
+    color: white;
+    padding: 20px;
+
+    &__titre {
+        font-family: $title-font;
+        padding: 5px 0;
+
+    }
+
+    &__list {
+        @include breakpoint(tablet) {
+            @include flex-row-center;
+            justify-content: flex-end;
+
+        }
+
+        &__links {
+            text-decoration: none;
+            color: white;
+            padding: 5px 0;
+            display: block;
+
+
+        }
+
+    }
+
+}
