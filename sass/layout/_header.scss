@@ -1,21 +1,52 @@
+// ACCEUIL
+
 .header {
     height: 113px;
 
     &__logo {
         @include flex-row-center;
         height: 50%;
+        
     }
 
     &__localisation {
         @include flex-row-center;
-        background: $background2;
-        border-top: 3px solid #00000026;
+        background: darken($background2, 2%);
         height: 50%;
+        border-top: 3px solid rgba(0, 0, 0, 0.127);
 
         &__city {
             display: inline-block;
             padding: 10px;
         }
+    }
+}
+
+
+// MENU
+
+.menuHeader {
+    overflow: hidden;
+    
+    &__logo {
+        @include flex-row-center;
+
+        &__arrow {
+            position: absolute;
+            left: 20px;
+            font-size: 17px;
+            color: black;
+        }
+
+        &__titre {
+            text-align: center;
+        }
+    }
+
+    &__image {
+        width: 100vw;
+        height: 275px;
+        object-fit: cover;
     }
 }
 

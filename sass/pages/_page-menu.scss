@@ -1,68 +1,159 @@
-.menuHeader{
-    &__logo{
-        @include flex-row-center;
-        &__arrow{
-            position: absolute;
-            left: 20px;
-            font-size: 17px;
-            color: black;
-            
-        }
-        &__titre{
-            text-align: center;
-        }
-    }
-    &__image{
-        width: 100vw;
-        height: 275px;
-        object-fit: cover;
-    }
-}
-
-.menuSection{
+.menuSection {
     background: #F6F6F6;
     border-radius: 40px 40px 0 0;
     position: relative;
     bottom: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 
-    &__title{
-        @include flex-row-center;
-        &__restaurant{
+
+    &__title {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+
+        @include breakpoint(desktop) {
+            justify-content: center;
+        }
+
+        &__restaurant {
             @include menus-titre;
+            margin-right: 20px;
         }
     }
 }
 
-.menus{
+
+
+
+
+
+@keyframes activLike {
+    to {
+        opacity: 1;
+    }
+}
+
+.menus {
+    margin: 0 auto;
     padding: 10px;
-    
-    
-    &__type{
+
+    @include breakpoint (desktop) {
+        padding: 20px 25%;
+    }
+
+    &__type {
         @include menu-type-title;
 
     }
-    &__container{
+
+    &__container {
         display: flex;
         flex-direction: column;
         gap: 12px;
 
-        &__card{
-        @include menu-card;
+        &__card {
+            @include menu-card;
+            overflow: hidden;
+            
 
-        &__plat{
 
-            &__info{
-                font-size: 15px;
-                font-weight: 300;
-                margin-top: 2px;
+            &__plat {
+                font-size: 18px;
+                
+
+                &__name, &__info{
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include breakpoint(xs){
+                        white-space: wrap;
+                        width: 80%;
+                    }
+                }
+
+                &__info {
+                    font-size: 15px;
+                    font-weight: 300;
+                    margin-top: 2px;
+                }
             }
+            &__price {
+                align-self: last baseline;
+                transform: translatex(0);
+                transition: transform 0.5s;
+                
+            }
+
+
+            &__check {
+                width: 60px;
+                height: 100%;
+                right: 0;
+                background: $tertiary-color;
+                border-radius: 0 15px 15px 0;
+                @include flex-row-center;
+                position: absolute;
+                transform: translateX(50px);
+                transition: all 0.5s;
+                visibility: hidden;
+
+
+                &__icon {
+                    color: $tertiary-color;
+                    background: white;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    @include flex-row-center;
+                }
+
+            }
+
+            &:hover &__check{
+                visibility: visible;
+                transform: translatex(0);
+                transition: all 0.5s;
+            }
+
+            &:hover &__price{
+                margin-right: 5px;
+                transform: translatex(-50px);
+                transition: 0.5s;
+            }
+
+            &:hover &__plat__name, &:hover &__plat__info{
+                width: 70%;
+                transition: width 0.5s;
+                @include breakpoint(tablet){
+                    width: 100%;
+                }
+            }
+            
+
+            
         }
-        &__price{
-            align-self: last baseline;
-        }
-    }
     }
 
-    
+
 }
- 
+
+
+// animation apparition cartes
+
+@for $i from 1 through 9 {
+    .crd-#{$i} {
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: card-pop 1.8s forwards;
+        animation-delay: $i * 0.2s;
+    }
+}
+
+@keyframes card-pop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

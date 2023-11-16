@@ -1,12 +1,14 @@
+// section explore
+
 .explore {
     @include flex-column-center;
     padding: 30px;
-    background: #eaeaea9e;
+    background-color: lighten($background2, 3%);
 
     &__titre {
         text-align: center;
-        padding: 15px;
         align-self: auto;
+        
     }
 
     &__text {
@@ -15,21 +17,15 @@
         font-size: 18px;
         color: $secondary-color-text;
     }
-
-    &__button {
-        @include main-button;
-    }
 }
 
 // ---------fonctionnement---------//
 
 .fonctionnement {
-    padding: 20px;
+    padding: 40px 20px;
 
     &__box {
         @include flex-column-center;
-
-
         @include breakpoint(desktop) {
             @include flex-row-center;
         }
@@ -45,10 +41,11 @@
             margin: 10px auto 30px;
             max-width: 320px;
             min-width: 290px;
+            
 
 
             &__icon {
-                color: $icon-color;
+                color: $icon-color-grey;
                 font-size: 20px;
                 padding: 0 20px;
                 position: absolute;
@@ -73,8 +70,10 @@
         }
     }
 
-
+ 
 }
+
+
 
 
 
@@ -82,7 +81,7 @@
 
 .restaurants {
     background: $background2;
-    padding: 15px;
+    padding: 40px 20px;
 
     &__box {
         width: 100%;
@@ -125,9 +124,7 @@
                     font-weight: 300;
                 }
 
-                i {
-                    font-size: 20px;
-                }
+               
             }
 
         }
