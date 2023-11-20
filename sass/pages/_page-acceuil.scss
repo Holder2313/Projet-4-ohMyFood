@@ -8,7 +8,6 @@
     &__titre {
         text-align: center;
         align-self: auto;
-        
     }
 
     &__text {
@@ -26,6 +25,7 @@
 
     &__box {
         @include flex-column-center;
+
         @include breakpoint(desktop) {
             @include flex-row-center;
         }
@@ -41,7 +41,7 @@
             margin: 10px auto 30px;
             max-width: 320px;
             min-width: 290px;
-            
+
 
 
             &__icon {
@@ -70,7 +70,7 @@
         }
     }
 
- 
+
 }
 
 
@@ -124,7 +124,7 @@
                     font-weight: 300;
                 }
 
-               
+
             }
 
         }

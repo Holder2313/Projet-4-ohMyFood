@@ -26,6 +26,12 @@ h3 {
 h4 {
   font-size: 18px;
   padding: 3px 0;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #353535;
 }
 
 .btn {
@@ -60,7 +66,7 @@ h4 {
   justify-content: center;
   align-items: center;
   animation: fade-out 0.3s forwards;
-  animation-delay: 0s;
+  animation-delay: 4s;
   z-index: 10;
 }
 .loader .lettres {
@@ -249,12 +255,8 @@ h4 {
   opacity: 0;
   transition: opacity 0.2s;
 }
-.like-btn__icon.fa-solid:hover {
-  opacity: 1;
-  transition: opacity 0.2s;
-}
 .like-btn__icon:hover {
-  transition: 0.2s;
+  opacity: 1;
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
@@ -331,19 +333,12 @@ h4 {
   overflow: hidden;
 }
 .menus__container__card__plat {
-  font-size: 18px;
+  width: 100%;
 }
 .menus__container__card__plat__name, .menus__container__card__plat__info {
   width: 100%;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-@media only screen and (max-width: 320px) {
-  .menus__container__card__plat__name, .menus__container__card__plat__info {
-    white-space: wrap;
-    width: 80%;
-  }
 }
 .menus__container__card__plat__info {
   font-size: 15px;
@@ -392,13 +387,9 @@ h4 {
   transition: 0.5s;
 }
 .menus__container__card:hover .menus__container__card__plat__name, .menus__container__card:hover .menus__container__card__plat__info {
-  width: 70%;
+  width: calc(100% - 60px);
+  white-space: nowrap;
   transition: width 0.5s;
-}
-@media only screen and (min-width: 490px) {
-  .menus__container__card:hover .menus__container__card__plat__name, .menus__container__card:hover .menus__container__card__plat__info {
-    width: 100%;
-  }
 }
 
 .crd-1 {
@@ -638,13 +629,6 @@ h4 {
   padding: 5px 0;
   display: block;
   margin: 0 7px;
-}
-.footer__list__legal {
-  color: blue;
-  font-size: 60px;
-}
-.footer .legal {
-  color: blue;
 }
 
 .header {

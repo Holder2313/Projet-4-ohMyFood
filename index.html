@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="./public/style.css">
   <title>Oh My Food</title>
 </head>
 
@@ -64,7 +64,7 @@
 
     <div class="fonctionnement__box">
 
-      <div class="fonctionnement__box__card">
+      <article class="fonctionnement__box__card">
         <p class="fonctionnement__box__card__number">1</p>
         <span class="fonctionnement__box__card__icon">
           <i class="fa-solid fa-mobile-screen-button"></i>
@@ -72,9 +72,9 @@
         <div class="fonctionnement__card__box__text">
           <p>Choisissez un restaurant</p>
         </div>
-      </div>
+      </article>
 
-      <div class="fonctionnement__box__card">
+      <article class="fonctionnement__box__card">
         <p class="fonctionnement__box__card__number">2</p>
         <div class="fonctionnement__box__card__icon">
           <i class="fa-solid fa-list-ul"></i>
@@ -82,9 +82,9 @@
         <div class="fonctionnement__card__box__text">
           <p>Composez votre menu</p>
         </div>
-      </div>
+      </article>
 
-      <div class="fonctionnement__box__card">
+      <article class="fonctionnement__box__card">
         <p class="fonctionnement__box__card__number">3</p>
         <div class="fonctionnement__box__card__icon fonctionnement__box__card__icon--color">
           <i class="fa-solid fa-store"></i>
@@ -92,7 +92,7 @@
         <div class="fonctionnement__card__box__text">
           <p>Dégustez au restaurant</p>
         </div>
-      </div>
+      </article>
 
     </div>
 
@@ -121,8 +121,10 @@
         </div>
       </a>
 
-      <a href="./restaurants/la_note_enchantee.html" title="la note enchantée" class="restaurants__box__card">
-        <img class="restaurants__box__card__img" src="/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="plat la note enchantée">
+      <article class="restaurants__box__card"></article>
+      <a href="./restaurants/la_note_enchantee.html" title="la note enchantée">
+        <img class="restaurants__box__card__img" src="/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+          alt="plat la note enchantée">
         <div class="restaurants__box__card__content">
           <div class="restaurants__box__card__content__text">
             <h4>La note enchantée</h4>
@@ -134,25 +136,29 @@
           </div>
         </div>
       </a>
+      </article>
 
-      <a href="./restaurants/a_la_francaise.html" title="a la francaise" class="restaurants__box__card">
-        <img class="restaurants__box__card__img" src="/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-          alt="plat A la francaise">
-        <div class="restaurants__box__card__content">
-          <div class="restaurants__box__card__content__text">
-            <h4>A la francaise</h4>
-            <p>Cité Rouge</p>
+      <article class="restaurants__box__card">
+        <a href="./restaurants/a_la_francaise.html" title="a la francaise">
+          <img class="restaurants__box__card__img" src="/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="plat A la francaise">
+          <div class="restaurants__box__card__content">
+            <div class="restaurants__box__card__content__text">
+              <h4>A la francaise</h4>
+              <p>Cité Rouge</p>
+            </div>
+            <div class="like-btn">
+              <i class="like-btn__icon fa-regular fa-heart"></i>
+              <i class="like-btn__icon fa-solid fa-heart"></i>
+            </div>
           </div>
-          <div class="like-btn">
-            <i class="like-btn__icon fa-regular fa-heart"></i>
-            <i class="like-btn__icon fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </a>
+        </a>
+      </article>
 
       <a href="./restaurants/les_delices_des_sens.html" title="le delice des sens" class="restaurants__box__card">
         <img class="restaurants__box__card__img"
-          src="/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat Les délices des sens" >
+          src="/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+          alt="plat Les délices des sens">
         <div class="restaurants__box__card__content">
           <div class="restaurants__box__card__content__text">
             <h4>Les délices des sens</h4>
@@ -165,9 +171,9 @@
         </div>
       </a>
     </div>
- 
 
-  </section> 
+
+  </section>
 
 
 
@@ -183,13 +189,13 @@
   <footer class="footer">
     <h4 class="footer__titre">ohmyfood</h4>
 
-    <div class="footer__list">
+    <nav class="footer__list">
       <a class="footer__list__links" href="#"><span><i class="fa-solid fa-utensils"></i> </span> &nbsp; Proposer un
         restaurant</a>
       <a class="footer__list__links" href="#"><span><i class="fa-solid fa-handshake"></i></span> Devenir partenaire</a>
       <a class="footer__list__links" href="#">Mentions légales</a>
       <a class="footer__list__links" href="mailto:ohmyfood@mail.com">Contact</a>
-    </div>
+    </nav>
 
 
   </footer>

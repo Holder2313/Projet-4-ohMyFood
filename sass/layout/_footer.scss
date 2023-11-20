@@ -1,54 +1,36 @@
 .footer {
-    background: $background-footer;
-    color: white;
-    padding: 20px;
+  background: $background-footer;
+  color: white;
+  padding: 20px;
 
-    @include breakpoint (desktop) {
-        @include flex-row-center;
-        flex-direction: row-reverse;
-        justify-content: end;
+  @include breakpoint(desktop) {
+    @include flex-row-center;
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+
+  &__titre {
+    font-family: $title-font;
+    padding: 5px 0;
+    margin: 0 5px;
+
+    @include breakpoint(desktop) {
+      margin: 0 5%;
+    }
+  }
+
+  &__list {
+    @include breakpoint(desktop) {
+      @include flex-row-center;
+      justify-content: flex-end;
     }
 
-    &__titre {
-        font-family: $title-font;
-        padding: 5px 0;
-        margin: 0 5px;
-
-        @include breakpoint(desktop) {
-            margin: 0 5%
-        }
-
+    &__links {
+      text-decoration: none;
+      color: white;
+      padding: 5px 0;
+      display: block;
+      margin: 0 7px;
     }
-
-    &__list {
-        @include breakpoint(desktop) {
-            @include flex-row-center;
-            justify-content: flex-end;
-        }
-
-
-        &__links {
-            text-decoration: none;
-            color: white;
-            padding: 5px 0;
-            display: block;
-            margin: 0 7px;
-
-        }
-
-        &__legal {
-            color: blue;
-            font-size: 60px;
-        }
-
-
-
-    }
-
-    .legal {
-        color: blue;
-    }
-
-
-
+  }
 }

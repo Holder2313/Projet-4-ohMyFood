@@ -1,33 +1,22 @@
-.like-btn{
+.like-btn {
 
     &__icon {
-            font-size: 24px;
-            cursor: pointer;
-            
-            
+        font-size: 24px;
+        cursor: pointer;
 
-            &.fa-solid{
-                position: absolute;
-                transform: translateX(-24px);
-                opacity: 0;
-                transition: opacity 0.2s;
-
-                &:hover{
-                    opacity: 1;
-                    transition: opacity 0.2s;
-                }
-            }
-
-            &:hover{
-                transition: 0.2s;
-                background: $button-color;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+        &.fa-solid {
+            position: absolute;
+            transform: translateX(-24px);
+            opacity: 0;
+            transition: opacity 0.2s;
         }
+
+        &:hover {
+            opacity: 1;
+            background: $button-color;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
-
-
-
-
