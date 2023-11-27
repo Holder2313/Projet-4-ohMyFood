@@ -41,7 +41,8 @@
     <div class="header__localisation">
       <p>
         <i class="fa-solid fa-location-dot"></i>
-        <span class="header__localisation__city">Paris, Belleville</span>
+        <input type="text" class="header__localisation__city" placeholder="Paris, Belleville">
+        <!-- <span class="header__localisation__city">Paris, Belleville</span> -->
       </p>
     </div>
   </header>
@@ -51,7 +52,7 @@
   <section class="explore">
     <h3 class="explore__titre">Réservez le menu qui vous convient</h3>
     <p class="explore__text">
-      Découvrez des restaurents d'exception, sélectionnnés par nos soins
+      Découvrez des restaurants d'exception, sélectionnnés par nos soins
     </p>
 
     <a class="btn" href="#">Explorer nos restaurants</a>
@@ -106,9 +107,10 @@
 
     <div class="restaurants__box">
 
-      <a href="./restaurants/la_palette_du_gout.html" title="la palette du goût" class="restaurants__box__card">
-        <img class="restaurants__box__card__img"
-          src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plat la palette du goût">
+      <article class="restaurants__box__card">
+      <a href="./restaurants/la_palette_du_gout.html" title="la palette du goût">
+        <img class="restaurants__box__card__img" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="plat la palette du goût">
         <div class="restaurants__box__card__content">
           <div class="restaurants__box__card__content__text">
             <h4>La palette du goût</h4>
@@ -120,6 +122,7 @@
           </div>
         </div>
       </a>
+      </article>
 
       <article class="restaurants__box__card">
       <a href="./restaurants/la_note_enchantee.html" title="la note enchantée">
@@ -155,33 +158,28 @@
         </a>
       </article>
 
-      <a href="./restaurants/les_delices_des_sens.html" title="le delice des sens" class="restaurants__box__card">
-        <img class="restaurants__box__card__img"
-          src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-          alt="plat Les délices des sens">
-        <div class="restaurants__box__card__content">
-          <div class="restaurants__box__card__content__text">
-            <h4>Les délices des sens</h4>
-            <p>Folie-Méricourt</p>
+      <article class="restaurants__box__card">
+        <a href="./restaurants/les_delices_des_sens.html" title="le delice des sens">
+          <img class="restaurants__box__card__img"
+            src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat A la francaise">
+          <div class="restaurants__box__card__content">
+            <div class="restaurants__box__card__content__text">
+              <h4>Les délices des sens</h4>
+              <p>Folie-Méricourt</p>
+            </div>
+            <div class="like-btn">
+              <i class="like-btn__icon fa-regular fa-heart"></i>
+              <i class="like-btn__icon fa-solid fa-heart"></i>
+            </div>
           </div>
-          <div class="like-btn">
-            <i class="like-btn__icon fa-regular fa-heart"></i>
-            <i class="like-btn__icon fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </a>
+        </a>
+      </article>
+      
+    
     </div>
 
 
   </section>
-
-
-
-
-
-
-
-
 
 
   <!-- footer -->
