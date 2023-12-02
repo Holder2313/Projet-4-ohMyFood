@@ -67,7 +67,7 @@ a {
   justify-content: center;
   align-items: center;
   animation: fade-out 0.3s forwards;
-  animation-delay: 4s;
+  animation-delay: 0s;
   z-index: 1;
 }
 .loader .lettres {
@@ -259,9 +259,9 @@ a {
 .like-btn__icon:hover {
   opacity: 1;
   background: linear-gradient(#ff79da, #9356dc);
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .menuSection {
@@ -290,11 +290,6 @@ a {
   margin-right: 20px;
 }
 
-@keyframes activLike {
-  to {
-    opacity: 1;
-  }
-}
 .menus {
   margin: 0 auto;
   padding: 10px;
@@ -396,64 +391,71 @@ a {
 .crd-1 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 0.2s;
 }
 
 .crd-2 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 0.4s;
 }
 
 .crd-3 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 0.6s;
 }
 
 .crd-4 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 0.8s;
 }
 
 .crd-5 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 1s;
 }
 
 .crd-6 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 1.2s;
 }
 
 .crd-7 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 1.4s;
 }
 
 .crd-8 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 1.6s;
 }
 
 .crd-9 {
   opacity: 0;
   transform: translateY(-10px);
-  animation: card-pop 1.8s forwards;
+  animation: card-pop 2s forwards;
   animation-delay: 1.8s;
+}
+
+.crd-10 {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: card-pop 2s forwards;
+  animation-delay: 2s;
 }
 
 @keyframes card-pop {
@@ -473,6 +475,7 @@ a {
 .explore__titre {
   text-align: center;
   align-self: auto;
+  font-size: 24px;
 }
 .explore__text {
   font-weight: 300;
@@ -558,6 +561,7 @@ a {
   }
 }
 .restaurants__box__card {
+  position: relative;
   color: black;
   text-decoration: none;
   width: 100%;
@@ -576,6 +580,17 @@ a {
   height: 70%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+}
+.restaurants__box__card__new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99e2d0;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 2px;
 }
 .restaurants__box__card__content {
   display: flex;

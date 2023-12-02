@@ -47,10 +47,18 @@
    border-radius: 15px;
    cursor: pointer;
    max-width: 100% ;
-   // overflow: hidden;
+}
 
-   
-
+@mixin newSticker{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: $tertiary-color;
+      color: $tertiarty-color-text;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 2px
 }
 
 

@@ -14,9 +14,10 @@
         &:hover {
             opacity: 1;
             background: $button-color;
+            color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
-            -webkit-text-fill-color: transparent;
+            
         }
     }
 }

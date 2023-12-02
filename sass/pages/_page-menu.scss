@@ -27,13 +27,6 @@
 
 
 
-
-@keyframes activLike {
-    to {
-        opacity: 1;
-    }
-}
-
 .menus {
     margin: 0 auto;
     padding: 10px;
@@ -62,9 +55,9 @@
             width: 100%;
                 &__name, &__info{
                     width: 100%;
-                    // white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    
                 }
 
                 &__info {
@@ -93,7 +86,7 @@
                 position: absolute;
                 transform: translateX(50px);
                 transition: all 0.5s;
-                visibility: hidden;
+                visibility: hidden; 
 
 
                 &__icon {
@@ -131,17 +124,13 @@
         }
     }
 
-
-
-
-
 // animation apparition cartes
 
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
     .crd-#{$i} {
         opacity: 0;
         transform: translateY(-10px);
-        animation: card-pop 1.8s forwards;
+        animation: card-pop 2s forwards;
         animation-delay: $i * 0.2s;
     }
 }
