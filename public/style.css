@@ -264,6 +264,18 @@ a {
   background-clip: text;
 }
 
+.newSticker {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99e2d0;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 2px;
+}
+
 .menuSection {
   background: #F6F6F6;
   border-radius: 40px 40px 0 0;
@@ -580,17 +592,6 @@ a {
   height: 70%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
-}
-.restaurants__box__card__new {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #99e2d0;
-  color: #008766;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 2px;
 }
 .restaurants__box__card__content {
   display: flex;
